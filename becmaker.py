@@ -54,10 +54,10 @@ def createbec(values):
 
 #GUI created
 layout = [
-            [sg.Text('Current level of output:'), sg.In(key=1)],
-            [sg.Text('Total fixed costs:'), sg.In(key=2)],
-            [sg.Text('Average variable costs:'), sg.In(key=3)],
-            [sg.Text('Price:'), sg.In(key=4)],
+            [sg.Text('Current level of output:', size = (20, 1)), sg.In(key=1)],
+            [sg.Text('Total fixed costs:', size = (20, 1)), sg.In(key=2)],
+            [sg.Text('Average variable costs:', size = (20, 1)), sg.In(key=3)],
+            [sg.Text('Price:', size = (20, 1)), sg.In(key=4)],
             [sg.Button('Create break-even chart'), sg.Button('Exit')]
         ]
 window = sg.Window('BECMaker', layout)
