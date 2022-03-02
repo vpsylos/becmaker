@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 import matplotlib.pyplot as plt
 
 def createbec(values):
-    #Input values defined
+    #Input values defined from values variable
     clo = int(values[1])
     tfc = int(values[2])
     avc = int(values[3])
