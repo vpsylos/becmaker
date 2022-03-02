@@ -31,7 +31,7 @@ def createbec(values):
     porlx = [beq, clo, clo, beq]
     porly = [bep, cc, cr, bep]
 
-    #Plot the two lines
+    #Plot the three lines
     plt.plot(x, y0, label = "Total Fixed Costs")
     plt.plot(x, y1, label = "Total Costs")
     plt.plot(x, y2, label = "Total Revenues")
@@ -41,7 +41,7 @@ def createbec(values):
     else:
         plt.fill(porlx, porly, "r", label = "Loss")
 
-    #Plot break-even point, current costs and revenues
+    #Plot break-even point, current costs and revenues, margin of safety
     plt.scatter(beq, bep)
     plt.annotate("BEQ, (%s, %s)" % (str(beq), str(bep)), (beq, bep))
     plt.scatter(clo, cc)
@@ -49,10 +49,12 @@ def createbec(values):
     plt.scatter(clo, cr)
     plt.annotate("(%s, %s)" % (str(clo), str(cr)), (clo, cr))
     plt.grid(linestyle = "dotted")
+    plt.axvspan(beq, clo, facecolor="lightcyan", alpha=0.5, label = "Margin of safety")
     leg = plt.legend(loc='upper center')
     plt.show()
 
 #GUI created
+sg.theme("Default1")
 layout = [
             [sg.Text('Current level of output:', size = (20, 1)), sg.In(key=1)],
             [sg.Text('Total fixed costs:', size = (20, 1)), sg.In(key=2)],
