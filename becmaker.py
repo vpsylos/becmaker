@@ -1,8 +1,10 @@
-import PySimpleGUI as sg
+#!/usr/bin/env python3
+
+import PySimpleGUIQt as sg
 import matplotlib.pyplot as plt
 
 def createbec(values):
-    #Input values defined from values variable
+    #Input values defined
     clo = int(values[1])
     tfc = int(values[2])
     avc = int(values[3])
@@ -31,23 +33,26 @@ def createbec(values):
     porlx = [beq, clo, clo, beq]
     porly = [bep, cc, cr, bep]
 
-    #Plot the three lines
+    #Plot the two lines
     plt.plot(x, y0, label = "Total Fixed Costs")
     plt.plot(x, y1, label = "Total Costs")
     plt.plot(x, y2, label = "Total Revenues")
     #Plot the shape indicating profit or loss
     if beq < clo:
         plt.fill(porlx, porly, "g", label = "Profit")
-    else:
+    elif beq > clo:
         plt.fill(porlx, porly, "r", label = "Loss")
 
-    #Plot break-even point, current costs and revenues, margin of safety
+    #Plot break-even point, current costs and revenues
     plt.scatter(beq, bep)
-    plt.annotate("BEQ, (%s, %s)" % (str(beq), str(bep)), (beq, bep))
-    plt.scatter(clo, cc)
-    plt.annotate("(%s, %s)" % (str(clo), str(cc)), (clo, cc))
-    plt.scatter(clo, cr)
-    plt.annotate("(%s, %s)" % (str(clo), str(cr)), (clo, cr))
+    if beq == clo:
+        plt.annotate("BEQ, CLO, (%s, %s)" % (str(beq), str(bep)), (beq, bep))
+    else:
+        plt.annotate("BEQ, (%s, %s)" % (str(beq), str(bep)), (beq, bep))
+        plt.scatter(clo, cc)
+        plt.annotate("CLO (Costs), (%s, %s)" % (str(clo), str(cc)), (clo, cc))
+        plt.scatter(clo, cr)
+        plt.annotate("CLO (Revenues), (%s, %s)" % (str(clo), str(cr)), (clo, cr))
     plt.grid(linestyle = "dotted")
     plt.axvspan(beq, clo, facecolor="lightcyan", alpha=0.5, label = "Margin of safety")
     leg = plt.legend(loc='upper center')
