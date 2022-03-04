@@ -12,11 +12,10 @@ Update: The program can now also display the margin of safety.
 
 `pip install matplotlib`
 
-2. Download the `becmaker.py` file.
-
-3. At the directory where the file is present, allow the program to be executed: `chmod +x becmaker.py`
-
-4. Execute the program: `./becmaker.py`
+2. Clone the repository: `git clone https://github.com/vpsylos125/becmaker.git`
+3. Change directory: `cd becmaker`
+4. Allow the program to be executed: `chmod +x becmaker.py`
+5. Execute the program: `./becmaker.py`
 
 #### If using Arch Linux (or Arch-based distro)
 
