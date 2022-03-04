@@ -1,4 +1,3 @@
-# Maintainer: Vangelis Psylos <vpsylos@gmail.com>
 pkgname="becmaker"
 pkgver="1.0"
 pkgrel="1"
