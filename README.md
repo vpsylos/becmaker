@@ -6,11 +6,17 @@ Update: The program can now also display the margin of safety.
 ## How to run becmaker
 ### In Linux:
 
-1. Download the `becmaker.py` file.
+1. Install dependencies:
 
-2. At the directory where the file is present, allow the program to be executed: `chmod +x becmaker.py`
+`pip install PySimpleGUIQt`
 
-3. Execute the program: `./becmaker.py`
+`pip install matplotlib`
+
+2. Download the `becmaker.py` file.
+
+3. At the directory where the file is present, allow the program to be executed: `chmod +x becmaker.py`
+
+4. Execute the program: `./becmaker.py`
 
 ### In Windows:
 
@@ -23,3 +29,5 @@ Executable version of the program is planned for release at a later time.
 - Creation of AppImage for the program
 
 - Maybe AUR, dmg for Macs
+
+- Maybe website version
