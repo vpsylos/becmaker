@@ -77,7 +77,7 @@ layout = [
             [sg.Text('Price:', size = (20, 1)), sg.In(key=6)],
             [sg.Button('Create break-even chart'), sg.Button('Exit')]
         ]
-window = sg.Window('BECMaker', layout)
+window = sg.Window('BECMaker', layout, icon = 'application-becmaker.png')
 while True:
     event, values = window.read()
     if event == sg.WIN_CLOSED or event == 'Exit':
