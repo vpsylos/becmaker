@@ -20,7 +20,20 @@ Update: The program can now also display the margin of safety.
 
 ### In Windows:
 
-Executable version of the program is planned for release at a later time.
+1. Download the `becmaker.exe` file under Releases
+2. Enjoy!
+
+## How to use becmaker
+
+becmaker can be used to create break-even charts for the IB Business Management course. When launching the program, the user needs to insert the following information:
+1. Business name (Used to create chart's title)
+2. Fiscal period (Used to create chart's title)
+3. Current level of output
+4. Total fixed costs
+5. Average variable costs
+6. Price
+
+Afterwards, the user must click the `Create break-even chart` button. The user can also save the chart in a `.png` file, by clicking on the save icon in the chart window.
 
 ## Additional features that may be added (any contribution welcome)
 
