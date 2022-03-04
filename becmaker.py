@@ -5,10 +5,13 @@ import matplotlib.pyplot as plt
 
 def createbec(values):
     #Input values defined
-    clo = int(values[1])
-    tfc = int(values[2])
-    avc = int(values[3])
-    pri = int(values[4])
+    busname = values[1]
+    timeper = values[2]
+    clo = int(values[3])
+    tfc = int(values[4])
+    avc = int(values[5])
+    pri = int(values[6])
+    
 
     #Calculates break-even point, costs and revenues at the current level of output
     beq = tfc // (pri - avc)
@@ -53,6 +56,11 @@ def createbec(values):
         plt.annotate("CLO (Costs), (%s, %s)" % (str(clo), str(cc)), (clo, cc))
         plt.scatter(clo, cr)
         plt.annotate("CLO (Revenues), (%s, %s)" % (str(clo), str(cr)), (clo, cr))
+    plt.scatter(0, tfc)
+    plt.annotate("Total fixed costs: %s" % (str(tfc)), (0, tfc))
+    plt.xlabel("Quantity (Units)")
+    plt.ylabel("Revenues/costs (USD)")
+    plt.title("Break-even chart of %s for %s" % (busname, timeper))
     plt.grid(linestyle = "dotted")
     plt.axvspan(beq, clo, facecolor="lightcyan", alpha=0.5, label = "Margin of safety")
     leg = plt.legend(loc='upper center')
@@ -61,10 +69,12 @@ def createbec(values):
 #GUI created
 sg.theme("Default1")
 layout = [
-            [sg.Text('Current level of output:', size = (20, 1)), sg.In(key=1)],
-            [sg.Text('Total fixed costs:', size = (20, 1)), sg.In(key=2)],
-            [sg.Text('Average variable costs:', size = (20, 1)), sg.In(key=3)],
-            [sg.Text('Price:', size = (20, 1)), sg.In(key=4)],
+            [sg.Text('Business name:', size = (20, 1)), sg.In(key=1)],
+            [sg.Text('Fiscal period:', size = (20, 1)), sg.In(key=2)],
+            [sg.Text('Current level of output:', size = (20, 1)), sg.In(key=3)],
+            [sg.Text('Total fixed costs:', size = (20, 1)), sg.In(key=4)],
+            [sg.Text('Average variable costs:', size = (20, 1)), sg.In(key=5)],
+            [sg.Text('Price:', size = (20, 1)), sg.In(key=6)],
             [sg.Button('Create break-even chart'), sg.Button('Exit')]
         ]
 window = sg.Window('BECMaker', layout)
