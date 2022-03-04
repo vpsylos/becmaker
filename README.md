@@ -22,12 +22,12 @@ Update: The program can now also display the margin of safety.
 
 Executable version of the program is planned for release at a later time.
 
-## Additional features to be added
+## Additional features that may be added (any contribution welcome)
 
 - Capability to create profit and loss accounts
 
-- Creation of AppImage for the program
+- Creation of AppImage for the program, AU
 
-- Maybe AUR, dmg for Macs
+- dmg for Macs
 
-- Maybe website version
+- Website version
