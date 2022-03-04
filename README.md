@@ -18,6 +18,12 @@ Update: The program can now also display the margin of safety.
 
 4. Execute the program: `./becmaker.py`
 
+#### If using Arch Linux (or Arch-based distro)
+
+1. Clone the repository: `git clone https://github.com/vpsylos125/becmaker.git`
+2. Change directory: `cd becmaker`
+3. Build the package: `makepkg -sirc`
+
 ### In Windows:
 
 1. Download the `becmaker.exe` file under Releases
