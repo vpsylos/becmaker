@@ -4,29 +4,9 @@ A tool to create break even charts for the IB Business Management course. The to
 Update: The program can now also display the margin of safety.
 
 ## How to run becmaker
-### In Linux:
+### In macOS:
 
-1. Install dependencies:
-
-`pip install PySimpleGUIQt`
-
-`pip install matplotlib`
-
-2. Clone the repository: `git clone https://github.com/vpsylos125/becmaker.git`
-3. Change directory: `cd becmaker`
-4. Allow the program to be executed: `chmod +x becmaker.py`
-5. Execute the program: `./becmaker.py`
-
-#### If using Arch Linux (or Arch-based distro)
-
-1. Clone the repository: `git clone https://github.com/vpsylos125/becmaker.git`
-2. Change directory: `cd becmaker`
-3. Build the package: `makepkg -sirc`
-
-### In Windows:
-
-1. Download the `becmaker.exe` file under Releases
-2. Enjoy!
+Download the `BECMaker.dmg` file and install the program in the Applications folder.
 
 ## How to use becmaker
 
